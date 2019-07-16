@@ -1,0 +1,762 @@
+Archive member included to satisfy reference by file (symbol)
+
+/opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o (exit)
+/opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              ./hal/seven_segment/seven_seg.o (__do_copy_data)
+/opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                              ./apps/lcd_app.o (__umulhisi3)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00008000         xr
+data             0x00800100         0x00000800         rw !x
+eeprom           0x00810000         0x00000400         rw !x
+fuse             0x00820000         0x00000003         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+LOAD ./mcal/EEPROM/eeprom.o
+LOAD ./mcal/DIO/Dio.o
+LOAD ./hal/seven_segment/seven_seg.o
+LOAD ./hal/lcd/lcd_new.o
+LOAD ./apps/eeprom_app.o
+LOAD ./apps/input_output_task.o
+LOAD ./apps/lcd_app.o
+LOAD ./apps/sevensegment_app.o
+LOAD ./main.o
+START GROUP
+LOAD /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libm.a
+LOAD /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a
+LOAD /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x00008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x00000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000       0xc4
+ *(.vectors)
+ .vectors       0x00000000       0x68 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.dinit)
+ .dinit         0x00000068        0x7 data_init
+                0x00000070                . = ALIGN (0x2)
+ *fill*         0x0000006f        0x1 
+                0x00000070                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000070        0x0 linker stubs
+ *(.trampolines*)
+                0x00000070                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+                0x00000070                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000070                __ctors_start = .
+ *(.ctors)
+                0x00000070                __ctors_end = .
+                0x00000070                __dtors_start = .
+ *(.dtors)
+                0x00000070                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000070        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000070                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000070        0xc /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000007c       0x3c /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x0000007c                __do_copy_data
+                0x000000aa                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000b8        0x8 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+                0x000000c0                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000c0        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x000000c0                exit
+                0x000000c0                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000c0        0x4 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000000c4                _etext = .
+
+.data           0x00800100        0x0 load address 0x000000c4
+                [!provide]                PROVIDE (__data_start, .)
+ *(.gnu.linkonce.d*)
+ *(.gnu.linkonce.r*)
+                0x00800100                . = ALIGN (0x2)
+                0x00800100                _edata = .
+                [!provide]                PROVIDE (__data_end, .)
+
+.bss            0x00800100        0x0
+                [!provide]                PROVIDE (__bss_start, .)
+ *(COMMON)
+                [!provide]                PROVIDE (__bss_end, .)
+                0x000000c4                __data_load_start = LOADADDR (.data)
+                0x000000c4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800100        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x00800100                _end = .
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x2f
+ *(.comment)
+ .comment       0x00000000       0x2f ./mcal/EEPROM/eeprom.o
+                                 0x30 (size before relaxing)
+ .comment       0x0000002f       0x30 ./mcal/DIO/Dio.o
+ .comment       0x0000002f       0x30 ./hal/seven_segment/seven_seg.o
+ .comment       0x0000002f       0x30 ./hal/lcd/lcd_new.o
+ .comment       0x0000002f       0x30 ./apps/eeprom_app.o
+ .comment       0x0000002f       0x30 ./apps/input_output_task.o
+ .comment       0x0000002f       0x30 ./apps/lcd_app.o
+ .comment       0x0000002f       0x30 ./apps/sevensegment_app.o
+ .comment       0x0000002f       0x30 ./main.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x5f4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x5f4 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_abbrev   0x00000000      0x5a2
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x5a2 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_line     0x00000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000       0x1a /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000      0x208
+ *(.debug_str)
+ .debug_str     0x00000000      0x208 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(avr_sdk.elf elf32-avr)
+LOAD linker stubs
+LOAD data_init
+
+.text           0x00000994        0x4
+ .text          0x00000994        0x4 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000994                __vector_22
+                0x00000994                __vector_1
+                0x00000994                __vector_24
+                0x00000994                __vector_12
+                0x00000994                __bad_interrupt
+                0x00000994                __vector_6
+                0x00000994                __vector_3
+                0x00000994                __vector_23
+                0x00000994                __vector_25
+                0x00000994                __vector_11
+                0x00000994                __vector_13
+                0x00000994                __vector_17
+                0x00000994                __vector_19
+                0x00000994                __vector_7
+                0x00000994                __vector_5
+                0x00000994                __vector_4
+                0x00000994                __vector_9
+                0x00000994                __vector_2
+                0x00000994                __vector_21
+                0x00000994                __vector_15
+                0x00000994                __vector_8
+                0x00000994                __vector_14
+                0x00000994                __vector_10
+                0x00000994                __vector_16
+                0x00000994                __vector_18
+                0x00000994                __vector_20
+
+.data%z1        0x00800100        0x0
+ .data          0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.bss%z2         0x00800100        0x0
+ .bss           0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+
+.text%z3        0x00000000        0x0
+ .text          0x00000000        0x0 ./mcal/EEPROM/eeprom.o
+
+.data%z4        0x00800100        0x0
+ .data          0x00800100        0x0 ./mcal/EEPROM/eeprom.o
+
+.bss%z5         0x00800100        0x0
+ .bss           0x00800100        0x0 ./mcal/EEPROM/eeprom.o
+
+.text.EEPROM_write
+                0x00000960       0x10
+ .text.EEPROM_write
+                0x00000960       0x10 ./mcal/EEPROM/eeprom.o
+                0x00000960                EEPROM_write
+
+.text.EEPROM_read
+                0x00000970        0xe
+ .text.EEPROM_read
+                0x00000970        0xe ./mcal/EEPROM/eeprom.o
+                0x00000970                EEPROM_read
+
+.text%z6        0x00000000        0x0
+ .text          0x00000000        0x0 ./mcal/DIO/Dio.o
+
+.data%z7        0x00800100        0x0
+ .data          0x00800100        0x0 ./mcal/DIO/Dio.o
+
+.bss%z8         0x00800100        0x0
+ .bss           0x00800100        0x0 ./mcal/DIO/Dio.o
+
+.text.dio_channel_config
+                0x000000c4      0x14c
+ .text.dio_channel_config
+                0x000000c4      0x14c ./mcal/DIO/Dio.o
+                0x000000c4                dio_channel_config
+
+.text.dio_channel_set
+                0x00000210      0x12c
+ .text.dio_channel_set
+                0x00000210      0x12c ./mcal/DIO/Dio.o
+                0x00000210                dio_channel_set
+
+.text.dio_channel_read
+                0x000007ec       0x44
+ .text.dio_channel_read
+                0x000007ec       0x44 ./mcal/DIO/Dio.o
+                0x000007ec                dio_channel_read
+
+.text.dio_port_config
+                0x00000908       0x18
+ .text.dio_port_config
+                0x00000908       0x18 ./mcal/DIO/Dio.o
+                0x00000908                dio_port_config
+
+.text.dio_port_set
+                0x00000920       0x18
+ .text.dio_port_set
+                0x00000920       0x18 ./mcal/DIO/Dio.o
+                0x00000920                dio_port_set
+
+.text%z9        0x00000000        0x0
+ .text          0x00000000        0x0 ./hal/seven_segment/seven_seg.o
+
+.data%z10       0x00800100        0x0
+ .data          0x00800100        0x0 ./hal/seven_segment/seven_seg.o
+
+.bss%z11        0x00800100        0x0
+ .bss           0x00800100        0x0 ./hal/seven_segment/seven_seg.o
+
+.text.display_digit_private
+                0x0000074a       0x58
+ .text.display_digit_private
+                0x0000074a       0x58 ./hal/seven_segment/seven_seg.o
+                0x0000074a                display_digit_private
+
+.text.init_seven_segment
+                0x00000830       0x3e
+ .text.init_seven_segment
+                0x00000830       0x3e ./hal/seven_segment/seven_seg.o
+                0x00000830                init_seven_segment
+
+.text.display_digit
+                0x00000938       0x14
+ .text.display_digit
+                0x00000938       0x14 ./hal/seven_segment/seven_seg.o
+                0x00000938                display_digit
+
+.rodata.segDataCathod
+                0x00800100        0xa load address 0x0000099c
+ .rodata.segDataCathod
+                0x00800100        0xa ./hal/seven_segment/seven_seg.o
+                0x00800100                segDataCathod
+
+.text%z12       0x00000000        0x0
+ .text          0x00000000        0x0 ./hal/lcd/lcd_new.o
+
+.data%z13       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./hal/lcd/lcd_new.o
+
+.bss%z14        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./hal/lcd/lcd_new.o
+
+.text.send_instruction_4bit
+                0x000006e8       0x62
+ .text.send_instruction_4bit
+                0x000006e8       0x62 ./hal/lcd/lcd_new.o
+
+.text.send_instruction_8bit
+                0x0000033c       0xb8
+ .text.send_instruction_8bit
+                0x0000033c       0xb8 ./hal/lcd/lcd_new.o
+
+.text.send_data_8bit
+                0x000003f4       0xb8
+ .text.send_data_8bit
+                0x000003f4       0xb8 ./hal/lcd/lcd_new.o
+
+.text.init_lcd  0x000004ac       0xb0
+ .text.init_lcd
+                0x000004ac       0xb0 ./hal/lcd/lcd_new.o
+                0x000004ac                init_lcd
+
+.text.lcd_write_text
+                0x000007a2       0x4a
+ .text.lcd_write_text
+                0x000007a2       0x4a ./hal/lcd/lcd_new.o
+                0x000007a2                lcd_write_text
+
+.text.lcd_write_char
+                0x0000089a       0x2a
+ .text.lcd_write_char
+                0x0000089a       0x2a ./hal/lcd/lcd_new.o
+                0x0000089a                lcd_write_char
+
+.text.lcd_write_char_cp
+                0x00000998        0x4
+ .text.lcd_write_char_cp
+                0x00000998        0x4 ./hal/lcd/lcd_new.o
+                0x00000998                lcd_write_char_cp
+
+.text.lcd_write_text_cp
+                0x0000086e       0x2c
+ .text.lcd_write_text_cp
+                0x0000086e       0x2c ./hal/lcd/lcd_new.o
+                0x0000086e                lcd_write_text_cp
+
+.text.lcd_clear
+                0x0000094c       0x14
+ .text.lcd_clear
+                0x0000094c       0x14 ./hal/lcd/lcd_new.o
+                0x0000094c                lcd_clear
+
+.text%z15       0x00000000        0x0
+ .text          0x00000000        0x0 ./apps/eeprom_app.o
+
+.data%z16       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./apps/eeprom_app.o
+
+.bss%z17        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./apps/eeprom_app.o
+
+.text.eeprom_app
+                0x0000097e        0xc
+ .text.eeprom_app
+                0x0000097e        0xc ./apps/eeprom_app.o
+                0x0000097e                eeprom_app
+
+.text%z18       0x00000000        0x0
+ .text          0x00000000        0x0 ./apps/input_output_task.o
+
+.data%z19       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./apps/input_output_task.o
+
+.bss%z20        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./apps/input_output_task.o
+
+.text.io_task   0x000008c4       0x26
+ .text.io_task  0x000008c4       0x26 ./apps/input_output_task.o
+                0x000008c4                io_task
+
+.text%z21       0x00000000        0x0
+ .text          0x00000000        0x0 ./apps/lcd_app.o
+
+.data%z22       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./apps/lcd_app.o
+
+.bss%z23        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./apps/lcd_app.o
+
+.text.lcd_app   0x0000055c       0xac
+ .text.lcd_app  0x0000055c       0xac ./apps/lcd_app.o
+                0x0000055c                lcd_app
+
+.text.int_str   0x0000067c       0x6c
+ .text.int_str  0x0000067c       0x6c ./apps/lcd_app.o
+                0x0000067c                int_str
+
+.text%z24       0x00000000        0x0
+ .text          0x00000000        0x0 ./apps/sevensegment_app.o
+
+.data%z25       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./apps/sevensegment_app.o
+
+.bss%z26        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./apps/sevensegment_app.o
+
+.text.seven_segment_app
+                0x00000608       0x74
+ .text.seven_segment_app
+                0x00000608       0x74 ./apps/sevensegment_app.o
+                0x00000608                seven_segment_app
+
+.text%z27       0x00000000        0x0
+ .text          0x00000000        0x0 ./main.o
+
+.data%z28       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 ./main.o
+
+.bss%z29        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 ./main.o
+
+.text.startup.main
+                0x0000098a        0xa
+ .text.startup.main
+                0x0000098a        0xa ./main.o
+                0x0000098a                main
+
+.text%z30       0x00000000        0x0
+ .text          0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.data%z31       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.bss%z32        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.mul%z33
+                0x00000000        0x0
+ .text.libgcc.mul
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.div%z34
+                0x00000000        0x0
+ .text.libgcc.div
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc%z35
+                0x00000000        0x0
+ .text.libgcc   0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.prologue%z36
+                0x00000000        0x0
+ .text.libgcc.prologue
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.builtins%z37
+                0x00000000        0x0
+ .text.libgcc.builtins
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.fmul%z38
+                0x00000000        0x0
+ .text.libgcc.fmul
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text.libgcc.fixed%z39
+                0x00000000        0x0
+ .text.libgcc.fixed
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+
+.text%z40       0x00000000        0x0
+ .text          0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.data%z41       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.bss%z42        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.mul%z43
+                0x00000000        0x0
+ .text.libgcc.mul
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.div%z44
+                0x00000000        0x0
+ .text.libgcc.div
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc%z45
+                0x00000000        0x0
+ .text.libgcc   0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.prologue%z46
+                0x00000000        0x0
+ .text.libgcc.prologue
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.builtins%z47
+                0x00000000        0x0
+ .text.libgcc.builtins
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.fmul%z48
+                0x00000000        0x0
+ .text.libgcc.fmul
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text.libgcc.fixed%z49
+                0x00000000        0x0
+ .text.libgcc.fixed
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+
+.text%z50       0x00000000        0x0
+ .text          0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.data%z51       0x00800100        0x0 load address 0x0000099c
+ .data          0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.bss%z52        0x00800100        0x0 load address 0x0000099c
+ .bss           0x00800100        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc.mul
+                0x000008ea       0x1e
+ .text.libgcc.mul
+                0x000008ea       0x1e /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+                0x000008ea                __umulhisi3
+
+.text.libgcc.div%z53
+                0x00000000        0x0
+ .text.libgcc.div
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc%z54
+                0x00000000        0x0
+ .text.libgcc   0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc.prologue%z55
+                0x00000000        0x0
+ .text.libgcc.prologue
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc.builtins%z56
+                0x00000000        0x0
+ .text.libgcc.builtins
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc.fmul%z57
+                0x00000000        0x0
+ .text.libgcc.fmul
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
+
+.text.libgcc.fixed%z58
+                0x00000000        0x0
+ .text.libgcc.fixed
+                0x00000000        0x0 /opt/microchip/xc8/v2.05/avr/bin/../lib/gcc/avr/5.4.0/avr5/libgcc.a(_umulhisi3.o)
