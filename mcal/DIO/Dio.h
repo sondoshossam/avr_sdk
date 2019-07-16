@@ -57,6 +57,7 @@ typedef enum
 	output,
 	input_pullup
 }Dio_ch_dir_t;
+
 void dio_channel_config(Dio_channel_t channel , Dio_ch_dir_t dir);
 void dio_channel_set(Dio_channel_t channel , Dio_ch_state_t state);
 Dio_ch_state_t dio_channel_read(Dio_channel_t channel);

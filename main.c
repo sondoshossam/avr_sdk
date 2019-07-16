@@ -6,10 +6,10 @@
  */
 
 
-extern int lcd_app(void);
+extern int keypad_app(void);
 int main(void)
 {
-	lcd_app();
+	keypad_app();
 	return 0;
 }
 
