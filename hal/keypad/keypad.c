@@ -93,11 +93,11 @@ static s8_t read_row_status()
 	{
 		row_index = 1;
 	}
-	else if(dio_channel_read(KP_R2) == low)
+	else if(dio_channel_read(KP_R3) == low)
 	{
 		row_index = 2;
 	}
-	else if(dio_channel_read(KP_R2) == low)
+	else if(dio_channel_read(KP_R4) == low)
 	{
 		row_index = 3;
 	}

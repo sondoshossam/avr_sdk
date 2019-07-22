@@ -4,6 +4,7 @@
  *  Created on: Jul 9, 2019
  *      Author: mohamed
  */
+#ifdef IO_APP
 #define F_CPU 16000000UL // crystal speed
 #include <util/delay.h>
 #include "../mcal/DIO/Dio.h"
@@ -31,5 +32,5 @@ int io_task(void)
     }
 	return 0;
 }
-
+#endif
 

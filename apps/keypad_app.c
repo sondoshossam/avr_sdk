@@ -4,6 +4,7 @@
  *  Created on: Jul 16, 2019
  *      Author: mohamed
  */
+#ifdef KEYPAD_APP
 #define F_CPU 16000000UL
 #include "../hal/lcd/lcd.h"
 #include <util/delay.h>
@@ -23,3 +24,4 @@ int keypad_app(void)
 	}
 	return 0;
 }
+#endif

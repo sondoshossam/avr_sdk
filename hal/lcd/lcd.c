@@ -100,7 +100,7 @@ static void set_xy_cursor_pos(u8_t row , u8_t col)
 	send_instruction_8bit(ddram_add);
 	_delay_us(100);
 }
-void lcd_write_text(u8_t* str , u8_t row ,  u8_t col)
+void lcd_write_text(char *str , u8_t row ,  u8_t col)
 {
 	u8_t i =0;
 	set_xy_cursor_pos(row , col);
@@ -119,7 +119,7 @@ void lcd_write_char_cp(u8_t chr)
 {
 	send_data_8bit(chr);
 }
-void lcd_write_text_cp(u8_t* str)
+void lcd_write_text_cp(char* str)
 {
 	u8_t i =0;
 	while(str[i] !=0)

@@ -4,6 +4,7 @@
  *  Created on: Jul 9, 2019
  *      Author: mohamed
  */
+#ifdef SEVEN_APP
 #define F_CPU 16000000UL // crystal speed
 #include <util/delay.h>
 #include "../hal/seven_segment/seven_seg.h"
@@ -51,3 +52,4 @@ int seven_segment_app(void)
 	}
 	return 0;
 }
+#endif

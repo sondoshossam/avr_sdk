@@ -4,6 +4,7 @@
  *  Created on: Jul 11, 2019
  *      Author: mohamed
  */
+#ifdef LCD_APP
 #define F_CPU 16000000UL
 #include <stdlib.h>
 #include <util/delay.h>
@@ -51,4 +52,4 @@ char* int_str(char* str , u16_t num , u8_t size )
 	}
 	return &str[size];
 }
-
+#endif

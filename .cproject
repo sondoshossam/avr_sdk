@@ -53,6 +53,12 @@
                             							
                             <tool id="de.innot.avreclipse.tool.compiler.winavr.base.1829041595" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.base">
                                 								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.def.365509000" name="Define Syms (-D)" superClass="de.innot.avreclipse.compiler.option.def" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="KEYSAFE_APP=1"/>
+                                    								
+                                </option>
+                                								
                                 <inputType id="de.innot.avreclipse.compiler.winavr.input.590593599" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
                                 							
                             </tool>
@@ -135,6 +141,12 @@
                                 								
                                 <option id="de.innot.avreclipse.compiler.option.optimize.1581285153" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
                                 								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.def.2003787909" name="Define Syms (-D)" superClass="de.innot.avreclipse.compiler.option.def" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="KEYSAFE_APP=1"/>
+                                    								
+                                </option>
+                                								
                                 <inputType id="de.innot.avreclipse.compiler.winavr.input.1411490286" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
                                 							
                             </tool>
@@ -193,12 +205,6 @@
         	
     </storageModule>
     	
-    <storageModule moduleId="scannerConfiguration">
-        		
-        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-        	
-    </storageModule>
-    	
     <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
     	
     <storageModule moduleId="refreshScope" versionNumber="2">
@@ -218,5 +224,23 @@
     </storageModule>
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.1661011561;de.innot.avreclipse.configuration.app.release.1661011561.;de.innot.avreclipse.tool.compiler.winavr.app.release.1135820773;de.innot.avreclipse.compiler.winavr.input.1411490286">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="de.innot.avreclipse.toolchain.winavr.base.1066029536;de.innot.avreclipse.toolchain.winavr.base.1066029536.1933413285;de.innot.avreclipse.tool.compiler.winavr.base.1829041595;de.innot.avreclipse.compiler.winavr.input.590593599">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
     
 </cproject>

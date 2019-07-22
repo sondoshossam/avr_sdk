@@ -21,7 +21,9 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+apps/KeySafe \
 apps \
+hal/h_bridge \
 hal/keypad \
 hal/lcd \
 hal/seven_segment \
@@ -29,4 +31,5 @@ hal/seven_segment \
 mcal/DIO \
 mcal/EEPROM \
 mcal/adc \
+mcal/usart \
 

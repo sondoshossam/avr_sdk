@@ -6,10 +6,10 @@
  */
 
 
-extern int keypad_app(void);
+extern void robot_app(void);
 int main(void)
 {
-	keypad_app();
+	robot_app();
 	return 0;
 }
 
