@@ -31,5 +31,10 @@ hal/seven_segment \
 mcal/DIO \
 mcal/EEPROM \
 mcal/adc \
+mcal/iic \
+mcal/spi \
+mcal/timer0 \
+mcal/timer1 \
+mcal/timer1_pwm \
 mcal/usart \
 

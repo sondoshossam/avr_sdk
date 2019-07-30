@@ -9,6 +9,11 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include mcal/usart/subdir.mk
+-include mcal/timer1_pwm/subdir.mk
+-include mcal/timer1/subdir.mk
+-include mcal/timer0/subdir.mk
+-include mcal/spi/subdir.mk
+-include mcal/iic/subdir.mk
 -include mcal/adc/subdir.mk
 -include mcal/EEPROM/subdir.mk
 -include mcal/DIO/subdir.mk

@@ -6,10 +6,10 @@
  */
 
 
-extern void robot_app(void);
+void timer0_test();
 int main(void)
 {
-	robot_app();
+	timer0_test();
 	return 0;
 }
 
